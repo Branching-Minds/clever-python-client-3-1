@@ -34,7 +34,6 @@ class Teacher(object):
         'ext': 'object',
         'last_modified': 'str',
         'legacy_id': 'str',
-        'name': 'Name',
         'school': 'str',
         'schools': 'list[str]',
         'sis_id': 'str',
@@ -50,7 +49,6 @@ class Teacher(object):
         'ext': 'ext',
         'last_modified': 'last_modified',
         'legacy_id': 'legacy_id',
-        'name': 'name',
         'school': 'school',
         'schools': 'schools',
         'sis_id': 'sis_id',
@@ -59,7 +57,7 @@ class Teacher(object):
         'title': 'title'
     }
 
-    def __init__(self, created=None, credentials=None, district=None, ext=None, last_modified=None, legacy_id=None, name=None, school=None, schools=None, sis_id=None, state_id=None, teacher_number=None, title=None):  # noqa: E501
+    def __init__(self, created=None, credentials=None, district=None, ext=None, last_modified=None, legacy_id=None, school=None, schools=None, sis_id=None, state_id=None, teacher_number=None, title=None):  # noqa: E501
         """Teacher - a model defined in Swagger"""  # noqa: E501
         self._created = None
         self._credentials = None
@@ -67,7 +65,6 @@ class Teacher(object):
         self._ext = None
         self._last_modified = None
         self._legacy_id = None
-        self._name = None
         self._school = None
         self._schools = None
         self._sis_id = None
@@ -87,8 +84,6 @@ class Teacher(object):
             self.last_modified = last_modified
         if legacy_id is not None:
             self.legacy_id = legacy_id
-        if name is not None:
-            self.name = name
         if school is not None:
             self.school = school
         if schools is not None:
@@ -228,26 +223,6 @@ class Teacher(object):
 
         self._legacy_id = legacy_id
 
-    @property
-    def name(self):
-        """Gets the name of this Teacher.  # noqa: E501
-
-
-        :return: The name of this Teacher.  # noqa: E501
-        :rtype: Name
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this Teacher.
-
-
-        :param name: The name of this Teacher.  # noqa: E501
-        :type: Name
-        """
-
-        self._name = name
 
     @property
     def school(self):
